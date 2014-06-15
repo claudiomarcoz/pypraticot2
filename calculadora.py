@@ -1,4 +1,4 @@
-class Operacao():
+-class Operacao():
     def calcular(self, param1, param2):
         pass
 

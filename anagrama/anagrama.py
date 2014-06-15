@@ -1,6 +1,7 @@
 import unittest
 
 
+
 def sao_anagramas(frase1, frase2):
     """
     Funcao que identifica anagramas
@@ -10,19 +11,18 @@ def sao_anagramas(frase1, frase2):
     """
 
     # eliminar espacos em branco
-    frase1 = frase1.replace(' ', '')
-    frase2 = frase2.replace(' ', '')
+    frase1,frase2 = frase1.replace(' ', ''),frase2.replace(' ', '')
 
     # comparar tamanho de cadeia com letras. Se for diferente, nao sao anagramas
-    if len(frase1) != len(frase2):
-        return False
+    #if len(frase1) != len(frase2):
+    #    return False
 
     # remover cada letra de frase1 de frase2, uma a uma da para fazer isso com
     # dica: parar remover apenas uma lestra, utilize frase2.replate('a','',1)
-    for letra_de_1 in frase1:
-        frase2=frase2.replace(letra_de_1,'',1)
+    #for letra_de_1 in frase1:
+    #    frase2=frase2.replace(letra_de_1,'',1)
 
-    return len(frase2)==0
+    return (sorted(frase1.lower())==sorted(frase2.lower()))
 
 
 class AnagramaTests(unittest.TestCase):
